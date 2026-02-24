@@ -1,3 +1,4 @@
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -15,7 +16,10 @@ let package = Package(
         .target(
             name: "BBBadgeBarButtonItem",
             path: "BBBadgeBarButtonItem",
-            publicHeadersPath: "."
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("."),
+            ]
         ),
     ]
 )
